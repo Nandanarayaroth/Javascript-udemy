@@ -1,0 +1,673 @@
+
+
+// let js = "amazing"
+// console.log(40+8+20-10)
+
+// console.log('Jonas')
+// console.log(23)
+
+// let firstName = "Bob"
+// console.log(firstName)
+
+// let myFirstJob = "Programer"
+// let myCurretJob = "Teacher"
+
+// let job1 = "programer"
+// let job2 = "tracher"
+
+// let javaScriptIs = true
+// console.log(javaScriptIs)
+
+// console.log(typeof true)
+
+// let age = 38
+// age = 31
+
+// const birtgYear = 2004
+// console.log(birtgYear)
+// console.log(age)
+
+
+// var job = 'programer'
+// job = 'Teacher'
+// console.log(job)
+
+// firstName = 'SchemmedMan'
+// console.log(firstName)
+
+
+// const ageJonas = 2037-2004
+// const ageSara = 2037-2013
+// console.log(ageJonas)
+// console.log(ageSara)
+
+// const now = 2037
+// const ageJonas = now - 1991
+// const ageSara = now- 2004
+// console.log(ageJonas,ageSara)
+
+// console.log(2**3) power
+
+// const firstName = "Nandana"
+// const lastName = "Rayaroth"
+// console.log(firstName + ' ' + lastName)
+
+// let x = 10 + 5
+// console.log(x)
+
+// let ageJonas = 15
+// let ageSara = 18
+
+// console.log(ageJonas > ageSara)
+
+// const now = 2037
+// const ageJonas = now - 1994
+// const ageSara = now - 2018
+
+// console.log(now - 1991 > now - 2018)
+
+// CHALLENGE 1&2
+// function claculateBMI(mass, height){
+//     let BMI = mass / (height * height)
+//     console.log(BMI)
+//     return BMI
+// }
+
+// let massOfMark = 95
+// let heightofMark = 1.88
+// const bmiofMark =  claculateBMI(massOfMark, heightofMark)
+
+// let massOfJohn = 85
+// let heightOfJohn = 1.76
+// const bmiofJohn = claculateBMI(massOfJohn, heightOfJohn)
+
+// if(bmiofJohn > bmiofMark){
+//     console.log("John has higher BMI")
+// }
+// else{
+//     console.log("Mark has higher BMI")
+// }
+
+// const firstName = 'Jonas'
+// const job = "Teacher"
+// const birtgYear = 1991
+// const year = 2037
+
+// const Jonas = "I'm "  + firstName + ", a " + (year-birtgYear) + " years old " + job + "!"
+// console.log(Jonas)
+
+// const jonaNew = `I'm ${firstName}, a ${year - birtgYear} years old ${job}!`
+// console.log(jonaNew)
+
+// const age = 15
+
+// if(age>= 18) {
+//     console.log("Sarah can start driving license")
+// }
+// else{
+//     const years = 18 - age
+//     console.log(`Sarah is too young. Wait another ${years} years`)
+// }
+
+// const birthYear = 1991
+// let century
+// if(birtgYear <= 2010) {
+//      century = 20
+// }
+// else{
+//      century = 21
+// }
+// console.log(century)
+
+// type conversion
+// const inputYear = 1991
+// console.log(Number(inputYear),inputYear)
+// console.log(Number(inputYear) + 18)
+
+// console.log(Number('Jonas'))
+// console.log(typeof NaN)
+
+
+// // type coversion
+// console.log('I am ' + 23 + ' years old')
+// console.log('23' - '10' - 3)
+// console.log('23' / '2')
+
+// console.log(Boolean(0))
+// console.log(Boolean(undefined))
+// console.log(Boolean('Jonas'))
+// console.log(Boolean({}))
+// console.log(Boolean (''))
+
+// const money = 10
+// if(money) {
+//     console.log("Don't spend it all ;")
+// }
+// else{
+//     console.log("You should get a job!")
+// }
+
+// let height
+// if(height) {
+//     console.log(`YAY! height id defined`)
+// }
+
+// const age = 18
+// if(age === 10) console.log(`You just become an adult`)
+// if(age === 18) console.log('You just become an adult')
+
+// const favorite = Number(prompt("What's your favorite number?"))
+// console.log(favorite)
+// console.log(typeof favorite)
+
+// if (favorite == 23) {
+//     console.log('Cool! 23 is an amazing number')
+// }
+
+
+//   CHALLENGE #3
+// function calculateAvg(score1, score2, score3){
+//     let avg = (score1+score2+score3) / 3
+//     return avg
+// }
+
+// let firstDolphi = 96
+// let secondDolphi = 108
+// let thirdDolphi = 89
+// let totalDolpghi = calculateAvg(firstDolphi, secondDolphi, thirdDolphi)
+// console.log(`Average of Dolphins is ${totalDolpghi}`)
+
+// let firstKoalas = 88
+// let secondKolas = 91
+// let thirdKolas = 110
+// let totalKoalas = calculateAvg(firstKoalas, secondKolas, thirdKolas)
+// console.log(`Average of Koalas is ${totalKoalas}`)
+
+// if(totalDolpghi > totalKoalas){
+//     console.log("Dolphias win")
+// }
+// else if(totalKoalas > totalDolpghi){
+//     console.log("Koalas win")
+// }
+// else if(totalDolpghi === totalKoalas){
+//     console.log("It's a tie")
+// }
+// const hasDriverslicense = true
+// const hasGoodVision = true
+
+// console.log(hasDriverslicense && hasGoodVision)
+// console.log(hasDriverslicense || hasGoodVision)
+// console.log(!hasDriverslicense)
+
+// const isTired = false
+// console.log(hasDriverslicense && hasGoodVision && isTired)
+
+// if(hasDriverslicense && hasGoodVision && isTired) {
+//     console.log('S')
+// }
+
+// const day = 'monday'
+
+// switch(day) {
+//     case 'monday' :
+//         console.log('Plan course structure')
+//         console.log('Go to coding meetup')
+//         break;
+//     case 'tuesday' :
+//         console.log('Prepare theory vedios')
+//         break
+//     case 'wenesday' :
+//     case 'thurseday' :
+//         console.log('Write code examples')
+//         break
+//     case 'friday' : 
+//         console.log('Recorde vedios')
+//         break
+//     case 'saturday' :
+//     case 'sunday' :
+//         console.log("Enjoy the weekend ")
+//     default:
+//         console.log('Not a valid day!')
+// }
+
+//   conditional is regular switch so the conditional operator   
+
+// const age = 23
+// age >= 18 ? console.log("I like to drink coffee") : console.log("I like to drink water")
+
+// let drink2
+// if(age >= 18) {
+//     drink2 = 'wine'
+// }
+// else{
+//     drink2 = 'water'
+// }
+// console.log(drink2)
+
+// CHALLENGE 4
+// let tip 
+// let billValue = 275
+
+// billValue ? (billValue <= 300 && billValue > 50 ? (tip = billValue * (15/100)) : (tip = billValue * (20/100))) : (console.log("Something error"))
+
+// let totalAmount = billValue + tip
+
+// console.log(`Bill value ${billValue}`)
+// console.log(`Tip amount ${tip}`)
+// console.log(`Total amount ${totalAmount}`)
+
+// 'use strict';
+
+// let hasDriverslicense = false
+// const passTest = true
+
+// if(passTest) hasDriverslicense = true
+// if(hasDriverslicense) console.log('I can drive ;D');
+
+// const interface = 'Audio'
+// const private = 534
+
+// function logger() {
+//     console.log('My name is Jonas')
+// }
+
+// logger()
+// logger()
+// logger()
+
+// function fruitProcessor(apples, oranges){
+//     console.log(apples, oranges)
+//     const juice = `Juice with ${apples} apples and ${oranges} oranges`
+//     return juice
+// }
+
+// fruitProcessor(5, 0)
+
+
+// function calcAgel(birthYear) {
+//     const age = 2037 - birthYear
+//     return age
+// }
+
+// const age = calcAgel(2004)
+// console.log(age)
+
+// const calcAgel = birthYear => 2037 -birthYear
+// const age3 = calcAgel(1991)
+// console.log(age3)
+
+// const years = (birthYear , firstName) => {
+//     const age = 2037 - birthYear
+//     const retirement = 65 - age
+
+//     return `${firstName} retries in ${retirement} years`
+// }
+
+// console.log(years(1991, 'Jonas'))
+// console.log(years(1980, 'Bob'))
+
+// function cutFruitPieces(fruit) {
+//     return fruit = 4
+// }
+
+// function fruitProcessor(apples, oranges) {
+//     const juice = `Juice with ${apples} apples and ${oranges} oranges`
+//     return juice
+// }
+
+// const calcAgel = function (birthYear) {
+//     return 2037 - birthYear
+// }
+
+// const yearsUnitRetrienment =  function (birthYear, firstName){
+//     const age = calcAgel(birthYear)
+//     const retirement = 65 - age
+
+//     if(retirement > 0) {
+//         return retirement
+//         console.log(`${firstName} retires in ${retirement} years`)
+//     }
+//     else{
+//         return -1
+//         console.log(`${firstName} has already retired`)
+//     }
+
+//     // return retirement
+
+//     // return `${firstName} retires in ${retirement} years`
+    
+// }
+
+// console.log(yearsUnitRetrienment(1991, 'Jonas'))
+// console.log(yearsUnitRetrienment(1970, 'Mike'))
+
+
+// CHALLENGE #1 IN FUNCTION
+
+// const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3
+
+// let scoreDolphins = calcAverage(43, 23, 71)
+
+// let scoreKolas = calcAverage(65, 54, 49)
+
+// function checkWinner(scoreDolphins, scoreKolas){
+//     if(scoreDolphins > (scoreKolas*2)){
+//         console.log(`Dolphins win (${scoreDolphins} vs ${scoreKolas})`)
+//     }
+//     else if(scoreKolas > scoreDolphins*2){
+//         console.log(`Koalas win (${scoreKolas} vs ${scoreDolphins})`)
+//     }
+//     else{
+//         console.log(`there is no winner`)
+//     }
+// }
+
+// checkWinner(scoreDolphins, scoreKolas)
+
+// const friend1 = 'Michael'
+// const friend2 = 'Steven'
+// const friend3 = 'Peter'
+
+// const friends = ['Michael', 'Steven', 'Peter']
+// console.log(friends)
+
+// const years = new Array(1991, 1984, 2008, 2020)
+
+// console.log(friends[0])
+// console.log(friends[2])
+// console.log(friends.length)
+// console.log(friends[friends.length-1])
+
+// friends[2] = 'Jay'
+// console.log(friends)
+
+// const friends = ['Michael', 'Steven', 'Peter']
+// // Add elements
+// const newLength = friends.push('Jay')
+// console.log(friends)
+// console.log(newLength)
+
+// friends.unshift('John')
+// // unshift add elements at the starting of the array
+// console.log(friends)
+
+// // Remove elements
+// friends.pop()
+// const popped = friends.pop()
+// console.log(popped)
+// console.log(friends)
+
+// friends.shift()
+// // remove first elments
+// console.log(friends)
+
+// console.log(friends.indexOf('Steven'))
+// console.log(friends.indexOf('Bob'))
+
+// friends.push(23)
+// console.log(friends.includes('Steven'))
+// console.log(friends.includes('Bob'))
+// console.log(friends.includes(23))
+
+// if(friends.includes('Steven')) {
+//     console.log('You have')
+// }
+
+// CHALLENGE #2 IN ARRAY
+// function calcTip(billValue){
+//     let tip
+//     let totalAmount
+//     if(billValue >50 && billValue<= 300){
+//         tip = billValue * (15/100)
+//         return totalAmount = tip + billValue
+//     }else if(billValue > 300){
+//         tip = billValue * (20/100)
+//         return totalAmount = tip + billValue
+//     }
+//     else{
+//         return billValue
+//     }
+// }
+
+// const bill = [125, 555, 44]
+
+// const tip = []
+// tip.push(calcTip(bill[0]))
+// tip.push(calcTip(bill[1]))
+// tip.push(calcTip(bill[2]))
+
+// console.log(tip)
+
+// const JonasArray = [
+//     "Jonas",
+//     "Schmedtman",
+//     2037-1991,
+//     "teacher",
+//     ['Michael', 'Peter', 'Steven']
+// ]
+
+// const Jonas = {
+//     firstName : "Jonas",
+//     lastName : "Schmedtman",
+//     age : 2037 - 1991,
+//     friends : ['Michel', 'Peter', 'Steven']
+// }
+
+// console.log(Jonas)
+
+// console.log(Jonas.lastName)
+// console.log(Jonas['lastName'])
+// // it return the value of lastName same as above
+
+// const nameKey = 'Name'
+// console.log(Jonas['first' + nameKey])
+// console.log(Jonas['last' + nameKey])
+
+
+// const interestedIn = prompt("What do you want to known about Jonas? Choose between firstName, lastName, age, job, and friends")
+// console.log(Jonas[interestedIn])
+
+// if (Jonas[interestedIn]) {
+//     console.log(Jonas[interestedIn])
+// }
+// else{
+//     console.log('Wrong request! Choose between FirstName, lastName, age, job and friednds')
+// }
+
+// add elements in object
+// Jonas.location = 'Portugal'
+// Jonas['twitter'] = '@jonasschmedtman'
+// console.log(Jonas)
+
+// console.log(`${Jonas.firstName} has ${Jonas.friends.length} friends, and his best friend is called ${Jonas.friends[0]}` )
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtman',
+//     birthYear : 1991,
+//     job: 'teacher',
+//     friends : ['Michael', 'Peter', "Steven"],
+//     hasDriversLicense : true,
+
+//     calAge: function () {
+//         console.log(this)
+//         return 2037 -this.birthYear
+//     },
+//     getSummmery : function(){
+//         return `${this.firstName} is a ${this.calAge()}-years old ${jonas.job}, and he has ${this.hasDriversLicense ? "a driver's license" : "no drivers license"}`
+//     }
+// }
+
+// console.log(jonas.calAge())
+// console.log(jonas.age)
+// console.log(jonas.age)
+
+// console.log(`${jonas.firstName} is a ${jonas.age}-years old ${jonas.job}, and he has a driver's license`)
+// console.log(jonas.getSummmery())
+
+// console.log(jonas['calAge'](1991))
+
+// CHALLENGE #3 OBJECTS
+
+// const mark = {
+//     fullName: "Mark Vincent",
+//     mass : 78,
+//     height: 1.69,
+//     calcBMI : function() {
+//         this.bmi = this.mass / (this.height * this.height)
+//         return  this.bmi
+//     }
+// }
+
+// const john = {
+//     fullName: "John Joseph",
+//     mass : 92,
+//     height: 1.95,
+//     calcBMI : function() {
+//         this.bmi = this.mass / (this.height * this.height)
+//         return this.bmi
+//     }
+// }
+// mark.calcBMI()
+// console.log(mark.bmi)
+// john.calcBMI()
+// console.log(john.bmi)
+
+// if(mark.bmi > john.bmi){
+//     console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
+// }
+// else{
+//     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
+// }
+
+
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights competion ${rep}`)
+// }
+
+// const JonasArray = [
+//     'Jonas', 
+//     'Schmedtman',
+//     2037-1991,
+//     'teacher',
+//     ['Michael', 'Peter', "Steven"]
+// ]
+// const types = []
+
+// for(let i = 0; i<JonasArray.length; i++){
+//     if(typeof JonasArray[i] !== 'string') continue
+//     console.log(JonasArray[i])
+//     types[i] = typeof JonasArray[i]
+// }
+
+// console.log(types)
+
+// for(let i = 0; i < JonasArray.length; i++){
+//     if(typeof JonasArray[i] === 'number') break
+//     console.log(JonasArray[i], typeof JonasArray[i])
+// }
+
+// const years = [1991, 2007, 1969, 2020]
+// const age = []
+
+// for(let i=0; i <years.length; i++) {
+//     age.push(2037 - years[i])
+// }
+
+// console.log(age)
+
+// const jonas = [
+//     'Jonas',
+//     'Schmedtman',
+//     2037-1991,
+//     'teacher',
+//     ['Micheal', 'Peter', 'Steven']
+// ]
+
+// for(let i = jonas.length-1; i >= 0; i--){
+//     console.log(i, jonas[i])
+// }
+
+// for(let exercise = 1; exercise < 4; exercise++){
+//     console.log(`--------Starting ${exercise}`)
+
+//     for(let rep = 1; rep<=5; rep++){
+//         console.log(`Lifting weight repetation ${rep}`)
+//     }
+// }
+
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repetations ${rep}`)
+// }
+
+// let rep = 1
+// while(rep <= 10){
+//     console.log('Lifiing')
+//     rep++
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1
+// console.log(dice)
+
+// while(dice !== 6){
+//     console.log(`You rolled a ${dice}`)
+//     dice = Math.trunc(Math.random() *6) +1
+// }
+
+
+// // CHALLENGE #5 
+// function calcTip(bill_value){
+//     let tip
+//     if(bill_value > 50 && bill_value < 300){
+//         tip = bill_value * (15/100)
+//         return tip
+//     }else if(bill_value > 300) {
+//         tip = bill_value * (20/100)
+//         return tip
+//     }else{
+//         return bill_value
+//     }
+// }
+
+// const bill = [22,295,176,440,37,105,10,1100,86,52]
+// let tip = []
+// let totals = []
+
+// for(let i = 0; i< bill.length; i++){
+//     let restore = calcTip(bill[i])
+//     tip.push(restore)
+//     restore = restore + bill[i]
+//     totals.push(restore)
+// }
+
+// console.log(tip)
+// console.log(totals)
+
+
+// function calcAverage(arr) {
+//     let sum = 0
+//     for(let i = 0 ; i< arr.length; i++){
+//         sum = arr[i] + sum
+//     }
+//     console.log (sum/(arr.length))
+//     console.log(sum)
+// }
+
+// calcAverage([2,3,6])
+
+const measureKelvin = function() {
+    const measurement = {
+        type: 'temp',
+        unit: 'celsius',
+        value : Number(prompt('Degree celsius'))
+    }
+
+    console.log(measurement.value)
+    console.warn(measurement.value)
+    console.error(measurement.value)
+
+    const kelvin = measureKelvin.value + 273
+    return kelvin
+
+}
+console.log(measureKelvin())
