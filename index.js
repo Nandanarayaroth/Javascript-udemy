@@ -863,54 +863,80 @@
 
 // // destructring object
 
-const restaurant = {
-    name: 'Classico Italiano',
-    location : 'Via Angelo Tavanti 23, Firenze, Italy',
-    categories : ['Italian', 'Pizzeria', 'Vegetaian', 'Organic'],
-    startMenu : ['Focaccia', 'Brushetta', 'Garlic Bread', 'Caprese Salad'],
-    mainMenu: ['Pizza', 'Pasta', 'Risoto'],
-    openingHours: {
-        thu : {
-            open: 12,
-            close: 22
-        },
-        fri: {
-            open: 12,
-            close: 23
-        },
-        sat: {
-            open: 0,
-            close: 24
-        }
-    },
-    order: function (starterIndex, mainIndex) {
-        return [this.startMenu[starterIndex], this.mainMenu[mainIndex]]
-    },
+// const restaurant = {
+//     name: 'Classico Italiano',
+//     location : 'Via Angelo Tavanti 23, Firenze, Italy',
+//     categories : ['Italian', 'Pizzeria', 'Vegetaian', 'Organic'],
+//     startMenu : ['Focaccia', 'Brushetta', 'Garlic Bread', 'Caprese Salad'],
+//     mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+//     openingHours: {
+//         thu : {
+//             open: 12,
+//             close: 22
+//         },
+//         fri: {
+//             open: 12,
+//             close: 23
+//         },
+//         sat: {
+//             open: 0,
+//             close: 24
+//         }
+//     },
+//     order: function (starterIndex, mainIndex) {
+//         return [this.startMenu[starterIndex], this.mainMenu[mainIndex]]
+//     },
 
-    orderDelivery: function({starterIndex, mainIndex, time, address}) {
-        console.log(`Order recieved! ${this.startMenu [starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
-    },
-    orderPaste: function(ing1, ing2, ing3){
-        console.log(`Here is your declicious pasta with ${ing1}, ${ing2}, ${ing3}`)
-    },
-    orderPizza: function(mainIngredient, ...otherIngrediens) {
-        console.log(mainIngredient)
-        console.log(otherIngrediens)
-    }
-}
+//     orderDelivery: function({starterIndex, mainIndex, time, address}) {
+//         console.log(`Order recieved! ${this.startMenu [starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
+//     },
+//     orderPaste: function(ing1, ing2, ing3){
+//         console.log(`Here is your declicious pasta with ${ing1}, ${ing2}, ${ing3}`)
+//     },
+//     orderPizza: function(mainIngredient, ...otherIngrediens) {
+//         console.log(mainIngredient)
+//         console.log(otherIngrediens)
+//     }
+// }
 
-restaurant.orderDelivery({
-    time: '22:30',
-    address: 'Via del Sole, 21',
-    mainIndex: 2,
-    starterIndex: 2
-})
+// restaurant.orderDelivery({
+//     time: '22:30',
+//     address: 'Via del Sole, 21',
+//     mainIndex: 2,
+//     starterIndex: 2
+// })
 
-const guests = restaurant.numGuests || 10
-console.log(guests)
+// const rest1 = {
+//     name : 'Capri',
+//     // numGuests: 20,
+// }
+// const rest2 = {
+//     name: 'La Piazza',
+//     owner: 'Giovanni Rossi'
+// }
 
-const guestCorrect = restaurant.numGuests ?? 10 ;
-console.log(guestCorrect)
+// rest1.numGuests = rest1.numGuests || 10
+// rest2.numGuests = rest2.numGuests || 10
+
+// rest1.numGuests ||= 10
+// rest2.numGuests ||= 10
+
+// rest1.numGuests ??= 10
+// rest2.numGuests ??= 10
+
+// rest1.owner = rest1.owner && '<ANONYMOUS>'
+// // rest2.owner = rest2.owner && '<ANONYMOUS>'
+// rest1.owner &&= '<ANONYMOUS>'
+// rest2.owner &&= '<ANONYMOUS>'
+
+// console.log(rest1)
+// console.log(rest2)
+
+// const guests = restaurant.numGuests || 10
+// console.log(guests)
+
+// const guestCorrect = restaurant.numGuests ?? 10 ;
+// console.log(guestCorrect)
 
 // console.log(3 || 'Jonas')
 // console.log('' || 'Jonas')
@@ -1013,3 +1039,157 @@ console.log(guestCorrect)
 // console.log(...str)
 
 // const ingredients = [prompt(`let's make pasta! Ingredient 1?`)]
+
+// // CHALLENGE#1
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// const [players1, players2] = game.players
+// console.log(players1, players2)
+
+// const [gk, ...fieldPlayers] = players1
+// console.log(gk, fieldPlayers)
+
+// const allplayers = [...players1, ...players2]
+// console.log(allplayers)
+
+// const players1FInal = [...players1, 'Thiago', 'Coutinho', 'Perisic']
+// console.log(players1FInal)
+
+// const {odds: {team1, x: draw, team2}} = game
+// console.log(team1, draw, team2)
+
+// const printGoals = function(...players) {
+//     console.log(players)
+//     console.log(`${players.length} goals were scored`)
+// }
+
+// // printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich')
+// // printGoals('Davies', 'Muller')
+// printGoals(...game.scored)
+
+// team1 < team2 && console.log('Team 1 is more likely to win')
+// team1 > team2 && console.log('Team 2 is more likely to win')
+
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+
+ const openingHours = {
+        [weekdays[3]] : {
+            open: 12,
+            close: 22
+        },
+        [weekdays[4]]: {
+            open: 12,
+            close: 23
+        },
+        ['weekdays[5']: {
+            open: 0,
+            close: 24
+        }
+    }
+
+const restaurant = {
+    name: 'Classico Italiano',
+    location : 'Via Angelo Tavanti 23, Firenze, Italy',
+    categories : ['Italian', 'Pizzeria', 'Vegetaian', 'Organic'],
+    startMenu : ['Focaccia', 'Brushetta', 'Garlic Bread', 'Caprese Salad'],
+    mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+    openingHours,
+   
+    order(starterIndex, mainIndex) {
+        return [this.startMenu[starterIndex], this.mainMenu[mainIndex]]
+    },
+
+    orderDelivery({starterIndex, mainIndex, time, address}) {
+        console.log(`Order recieved! ${this.startMenu [starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
+    },
+    orderPaste(ing1, ing2, ing3){
+        console.log(`Here is your declicious pasta with ${ing1}, ${ing2}, ${ing3}`)
+    },
+    orderPizza(mainIngredient, ...otherIngrediens) {
+        console.log(mainIngredient)
+        console.log(otherIngrediens)
+    }
+}
+
+const menu = [...restaurant.startMenu, ...restaurant.mainMenu]
+
+for(const item of menu) console.log(item)
+
+for(const [i, el] of menu.entries()) {
+    console.log(`${i + 1}: ${el}`)
+}
+
+console.log([...menu.entries()])
+
+if(restaurant.openingHours && restaurant.openingHours.mon) 
+console.log(restaurant.openingHours.mon.open)
+
+console.log(restaurant.openingHours.mon?.open)
+console.log(restaurant.openingHours.mon?.open)
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+
+for(const day of days) {
+    console.log(day)
+    const open = restaurant.openingHours[day] ?.open || 'closed' ;
+    console.log(`On ${day}, we open at ${open}`)
+
+}
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist')
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist')
+
+const users = [
+    {name : 'Jonas',
+        email: 'hello@jonas.io'
+    }
+]
+
+console.log(users[0]?.name ?? 'Usesr array empty')
+
+if(users.length > 0) console.log(users[0].name)
+else console.log(`user array empty`)
+
+// 
+
+
+//  
