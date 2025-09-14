@@ -1187,9 +1187,4 @@ const users = [
 console.log(users[0]?.name ?? 'Usesr array empty')
 
 if(users.length > 0) console.log(users[0].name)
-else console.log(`user array empty`)
-
-// 
-
-
-//  
+else console.log(`user array empty`)  
