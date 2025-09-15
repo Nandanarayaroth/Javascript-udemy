@@ -74,4 +74,4 @@
 // objects :-> object literals, Arrays, FUnctions, many more...
 
 // memory lifecycle
-// are stored global execution context which
+// 

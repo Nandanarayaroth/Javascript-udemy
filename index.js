@@ -1109,82 +1109,536 @@
 // team1 < team2 && console.log('Team 1 is more likely to win')
 // team1 > team2 && console.log('Team 2 is more likely to win')
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+// const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 
- const openingHours = {
-        [weekdays[3]] : {
-            open: 12,
-            close: 22
-        },
-        [weekdays[4]]: {
-            open: 12,
-            close: 23
-        },
-        ['weekdays[5']: {
-            open: 0,
-            close: 24
-        }
-    }
+//  const openingHours = {
+//         [weekdays[3]] : {
+//             open: 12,
+//             close: 22
+//         },
+//         [weekdays[4]]: {
+//             open: 12,
+//             close: 23
+//         },
+//         ['weekdays[5']: {
+//             open: 0,
+//             close: 24
+//         }
+//     }
+
+// const restaurant = {
+//     name: 'Classico Italiano',
+//     location : 'Via Angelo Tavanti 23, Firenze, Italy',
+//     categories : ['Italian', 'Pizzeria', 'Vegetaian', 'Organic'],
+//     startMenu : ['Focaccia', 'Brushetta', 'Garlic Bread', 'Caprese Salad'],
+//     mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+//     openingHours,
+   
+//     order(starterIndex, mainIndex) {
+//         return [this.startMenu[starterIndex], this.mainMenu[mainIndex]]
+//     },
+
+//     orderDelivery({starterIndex, mainIndex, time, address}) {
+//         console.log(`Order recieved! ${this.startMenu [starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
+//     },
+//     orderPaste(ing1, ing2, ing3){
+//         console.log(`Here is your declicious pasta with ${ing1}, ${ing2}, ${ing3}`)
+//     },
+//     orderPizza(mainIngredient, ...otherIngrediens) {
+//         console.log(mainIngredient)
+//         console.log(otherIngrediens)
+//     }
+// }
+
+// const menu = [...restaurant.startMenu, ...restaurant.mainMenu]
+
+// for(const item of menu) console.log(item)
+
+// for(const [i, el] of menu.entries()) {
+//     console.log(`${i + 1}: ${el}`)
+// }
+
+// console.log([...menu.entries()])
+
+// if(restaurant.openingHours && restaurant.openingHours.mon) 
+// console.log(restaurant.openingHours.mon.open)
+
+// console.log(restaurant.openingHours.mon?.open)
+// console.log(restaurant.openingHours.mon?.open)
+
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+
+// for(const day of days) {
+//     console.log(day)
+//     const open = restaurant.openingHours[day] ?.open || 'closed' ;
+//     console.log(`On ${day}, we open at ${open}`)
+
+// }
+
+// console.log(restaurant.order?.(0, 1) ?? 'Method does not exist')
+// console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist')
+
+// const users = [
+//     {name : 'Jonas',
+//         email: 'hello@jonas.io'
+//     }
+// ]
+
+// console.log(users[0]?.name ?? 'Usesr array empty')
+
+// if(users.length > 0) console.log(users[0].name)
+// else console.log(`user array empty`)  
+
+// const properties = Object.keys(openingHours)
+// console.log(properties)
+
+// let openStr = `We are open on ${properties.length} days`
+
+// for(const day of (openingHours)) {
+//     openStr += `${day}`
+// }
+// console.log(openStr)
+
+// const values = Object.values(openingHours)
+// console.log(values)
+
+// const entries = Object.entries(openingHours)
+// console.log(entries)
+
+// for(const [key, {open, close }] of entries) {
+//     console.log(`On ${key} we open at ${open} and close at ${close}`)
+// }
+
+
+// const game = {
+//     team1: 'Bayern Munich',
+//     team2: 'Borrusia Dortmund',
+//     players: [
+//         [
+//             'Neuer',
+//             'Pavard',
+//             'Martinez',
+//             'Alaba',
+//             'Davies',
+//             'Kimmich',
+//             'Goretzka',
+//             'Coman',
+//             'Muller',
+//             'Gnarby',
+//             'Lewandowski',
+//         ],
+//         [
+//             'Bruki',
+//             'Schulz',
+//             'Hummels',
+//             'Akanji',
+//             'Hakimi',
+//             'Weigl',
+//             'Witsel',
+//             'Hazard',
+//             'Brandt',
+//             'Sancho',
+//             'Gotze'
+//         ],
+//     ],
+//     score: '4:0',
+//     scored: ['Lewandwoski', 'Gnarby', 'Lewandowski', 'Hummls'],
+//     date: 'Nov 9th 2037',
+//     odds: {
+//         team1: 1.33,
+//         x: 3.25,
+//         team2: 6.5,
+//     },
+// }
+
+// for(const [i, player] of game.scored.entries())
+//     console.log(`Goal ${i + 1}: ${player}`)
+
+// for(const [team, odd] of Object.entries(game.odds)) {
+//     const teamStr = team == 'x' ? 'draw' : `Victory ${game[team]}`
+//     console.log(`Odd of ${teamStr} ${odd}`)
+// }
+
+
+// const orderSet = new Set([
+//     `Pasta`,
+//     `Pizza`,
+//     `Pizza`, 
+//     `Risotto`, 
+//     `Pasta`, 
+//     `Pizza`
+// ])
+// console.log(orderSet)
+
+// console.log(new Set('Jonas'))
+
+// console.log(orderSet.size)
+// console.log(orderSet.has(`Pizza`))
+// console.log(orderSet.has('Bread'))
+// orderSet.add(`Garlic Bread`)
+// orderSet.add('Garlic Bread')
+// orderSet.delete('Rispttp')
+
+// console.log(orderSet)
+
+// for(const order of orderSet) console.log(order)
+
+// const staff = [
+//     'Waiter',
+//     'Chef',
+//     'Waiter',
+//     'Manager',
+//     'Chef',
+//     'Waiter'
+// ]
+
+// const staffUnique = [...new Set(staff)]
+// console/log(staffUnique)
+// console.log(
+//     new Set(['Waiter', 'Chef'])
+// )
+
+// const italianFood = new Set([
+//     'pasta',
+//     'gnocchi',
+//     'tomatoes',
+//     'olives oil',
+//     'garlic',
+//     'ball'
+// ])
+
+// const mexicanFood = new Set([
+//     'tortillas',
+//     'beans',
+//     'rice',
+//     'tomatoes',
+//     'avocado',
+//     'garlic'
+// ])
+// const commonFoods = italianFood.intersection(mexicanFood)
+// console.log(`InterSection: `, commonFoods)
+// console.log([commonFoods])
+
+// const italianMexicanFunsion = italianFood.union(mexicanFood)
+// console.log('union', italianFood)
+
+// console.log(new Set([...italianFood, ...mexicanFood]))
+
+// const uniqueitalianFoods = italianFood.difference(mexicanFood)
+// console.log(`Difference italian`, uniqueitalianFoods)
+
+// const uniqueMexicanFoods = mexicanFood.difference(italianFood)
+// console.log('Difference mexican', uniqueMexicanFoods)
+
+// const uniqueItalianMexicanFoods = italianFood.symmetricDifference(mexicanFood)
+// console.log(uniqueItalianMexicanFoods)
+
+
+// const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const openingHours = {
+//   [weekdays[3]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   [weekdays[4]]: {
+//     open: 11,
+//     close: 23,
+//   },
+//   [weekdays[5]]: {
+//     open: 0, // Open 24 hours
+//     close: 24,
+//   },
+// };
+
+// const restaurant = {
+//     name: 'Classico Italiano',
+//     location: 'Via angelo Tavanti 23, Firenze, Italy',
+//     categories: ['Italian', 'Pizzeria', 'Vegetrian', 'Organic'],
+//     staterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//     mainMenu : [ 'Pizza', 'Pasta', 'Risotto' ],
+
+//     openingHours,
+
+//     order(starterIndex, mainIndex) {
+//         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//     },
+
+//     orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+//         console.log(
+//         `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//         );
+//     },
+
+//     orderPasta(ing1, ing2, ing3) {
+//         console.log(
+//         `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+//         );
+//     },
+
+//     orderPizza(mainIngredient, ...otherIngredients) {
+//         console.log(mainIngredient);
+//         console.log(otherIngredients);
+//     },
+// }
+
+// const rest = new Map()
+
+// rest.set('name', 'Classico Italiano')
+// rest.set(1, 'Firenze, Italy')
+// console.log(rest.set(2, 'Lisbon, Portugal'))
+
+// rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']).set('open', 11).set('close', 23)
+// .set(true, 'We are open:D')
+// .set(false, `We are closed :(`)
+
+
+// console.log(rest.get('name'))
+// console.log(rest.get(true))
+// console.log(rest.get(1))
+
+// const time = 21
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')))
+
+
+// console.log(rest.has('categories'))
+// rest.delete(2)
+
+// const arr = [1,2]
+// rest.set(arr, 'Test')
+// console.log(rest)
+// console.log(rest.size)
+
+// console.log(rest.get(arr))
+
+// const question = new Map([
+//     ['question', 'What is the best programming language in the world?'],
+//     [1,'c'],
+//     [2, 'Java'],
+//     [3, 'Javascipt'],
+//     ['correct', 3],
+//     [true, 'correct'],
+//     [false, 'Try again!']
+// ])
+// console.log(question)
+
+// console.log(Object.entries(openingHours))
+// const hoursMap = new Map(Object.entries(openingHours))
+
+// console.log(hoursMap)
+
+// for(const [key, value] of question){
+
+//     if(typeof key === 'number'){
+//         console.log(`Answer ${key}: ${value}`)
+//     }
+// }
+
+// const answer = Number(prompt(`Your answer`))
+// console.log(answer)
+
+// console.log(question.get(question.get(`correct`) === answer))
+
+// console.log(...question)
+// console.log(question.entries())
+// console.log([...question.keys()])
+
+
+// const gameEvents = new Map([
+//   [17, 'Goal'],
+//   [36, '🔁 Substitution'],
+//   [47, '⚽️ GOAL'],
+//   [61, '🔁 Substitution'],
+//   [64, '🔶 Yellow card'],
+//   [69, '🔴 Red card'],
+//   [70, '🔁 Substitution'],
+//   [72, '🔁 Substitution'],
+//   [76, '⚽️ GOAL'],
+//   [80, '⚽️ GOAL'],
+//   [92, '🔶 Yellow card'],
+// ])
+
+// const event = [...new Set(gameEvents.values())]
+// console.log(event)
+
+// gameEvents.delete(64)
+// console.log(gameEvents)
+
+// console.log(
+//     `An event happend, on average, every ${90 / gameEvents.size} minutes`
+// )
+// const time = [...gameEvents.keys()].pop()
+// console.log(time)
+
+// for(const [min, event] of gameEvents) {
+//     const half = min <= 45 ? 'FIRST' : 'SECOND'
+//     console.log(`[${half} HALF] ${min}: ${event}`)
+// }
+
+
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[5]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
 
 const restaurant = {
-    name: 'Classico Italiano',
-    location : 'Via Angelo Tavanti 23, Firenze, Italy',
-    categories : ['Italian', 'Pizzeria', 'Vegetaian', 'Organic'],
-    startMenu : ['Focaccia', 'Brushetta', 'Garlic Bread', 'Caprese Salad'],
-    mainMenu: ['Pizza', 'Pasta', 'Risoto'],
-    openingHours,
-   
-    order(starterIndex, mainIndex) {
-        return [this.startMenu[starterIndex], this.mainMenu[mainIndex]]
-    },
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-    orderDelivery({starterIndex, mainIndex, time, address}) {
-        console.log(`Order recieved! ${this.startMenu [starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
-    },
-    orderPaste(ing1, ing2, ing3){
-        console.log(`Here is your declicious pasta with ${ing1}, ${ing2}, ${ing3}`)
-    },
-    orderPizza(mainIngredient, ...otherIngrediens) {
-        console.log(mainIngredient)
-        console.log(otherIngrediens)
-    }
+  // ES6 enhanced object literals
+  openingHours,
+
+  order(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
+
+  orderPasta(ing1, ing2, ing3) {
+    console.log(
+      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
+
+  orderPizza(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
+};
+
+console.log(`a+very+nice+string`. split('+'))
+console.log(`Jonas Schmedtman`. split(''))
+
+const [firstName, lastName] = `Jonas Schedtman`.split(' ')
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ')
+console.log(newName)
+
+const capitalizeName = function(name) {
+   const names = name.split(' ')
+   const namesUpper = []
+
+   for(const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1))
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()))
+
+   }
+   console.log(namesUpper.join(' '))
+}
+capitalizeName('jessica ann smith davis')
+capitalizeName('jonas schmedtman')
+
+
+const message = 'Go to gate 23!'
+console.log(message.padStart(25, '+').padEnd(30, '+'))
+console.log('Jonas'.padStart(25, '+').padEnd(30, '+'))
+
+const maskCreditCard = function(number) {
+    const str = number + ''
+    const last = str.slice(-4)
+    // console.log(str)
+    return last.padStart(str.length, '*')
 }
 
-const menu = [...restaurant.startMenu, ...restaurant.mainMenu]
+console.log(maskCreditCard(123123))
+console.log(maskCreditCard(12345678910))
+console.log(maskCreditCard('1365498720'))
 
-for(const item of menu) console.log(item)
+const message2 = 'Bad weather... All Departues Delayed...'
+console.log(message2.repeat(5))
 
-for(const [i, el] of menu.entries()) {
-    console.log(`${i + 1}: ${el}`)
+const planesInline = function(n) {
+    console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
 }
 
-console.log([...menu.entries()])
+planesInline(5)
+planesInline(3)
+planesInline(12)
 
-if(restaurant.openingHours && restaurant.openingHours.mon) 
-console.log(restaurant.openingHours.mon.open)
+// const airline = `TAP Air Portugal`
+// const plane = `A320`
 
-console.log(restaurant.openingHours.mon?.open)
-console.log(restaurant.openingHours.mon?.open)
+// console.log(plane[0])
+// console.log(plane[1])
+// console.log(plane[2])
+// console.log(`B737`[0])
 
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+// console.log(airline.length)
+// console.log('B737', length)
 
-for(const day of days) {
-    console.log(day)
-    const open = restaurant.openingHours[day] ?.open || 'closed' ;
-    console.log(`On ${day}, we open at ${open}`)
+// console.log(airline.indexOf('r'))
+// console.log(airline.lastIndexOf('r'))
+// console.log(airline.indexOf('portugal'))
 
-}
+// console.log(airline.slice(4))
+// console.log(airline.slice(4, 7))
 
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exist')
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist')
+// console.log(airline.slice(0, airline.indexOf('')))
+// console.log(airline.slice(airline.lastIndexOf('') + 1))
 
-const users = [
-    {name : 'Jonas',
-        email: 'hello@jonas.io'
-    }
-]
+// console.log(airline.slice(-2))
+// console.log(airline.slice(1,-1))
 
-console.log(users[0]?.name ?? 'Usesr array empty')
+// const checkMiddleSeat = function(seat) {
 
-if(users.length > 0) console.log(users[0].name)
-else console.log(`user array empty`)  
+//     const s = seat.slice(-1)
+//     if(s === 'B' || s === 'E')
+//         console.log(`You got the middle seat`)
+//     else
+//         console.log(`You got licky`)
+// }
+
+// checkMiddleSeat('11B')
+// checkMiddleSeat('23c')
+// checkMiddleSeat('3E')
+
+// console.log(new String('jonas'))
+// console.log(typeof new String('jonas'))
+
+// console.log(typeof new String)
+
+// console.log(airline.toLowerCase())
+// console.log(airline.toUpperCase())
+
+// const passenger = 'jOnAS'
+// const passengerLower = passenger.toLocaleLowerCase()
+// const passengerCorrect = passengerLower[0].toUpperCase()+ passengerLower.slice(1)
+// console.log(passengerCorrect)
+
+// const email = `hello@jonas.io`
+// const loginEmail = `Hello@jonas.Io \n`
+
+// const lowerEmail = loginEmail.toLowerCase()
+// const trmmedEmail = loginEmail.trim()
+// console.log(trmmedEmail)
+
+// const normalizedEmail = loginEmail.toLocaleLowerCase().trim()
+// console.log(normalizedEmail)
+// console.log(email === normalizedEmail)
+
+// const priceGB = `288,97E`
+// const priceUS = priceGB.replace('E', 'S').replace(`,`, `.`)
+
+// const announcement = `Allcpassengers come to barding door 23!`
+
+// 
+
+
+//     
