@@ -1671,7 +1671,7 @@
 //   }
 
 
-'use strict'
+// 'use strict'
 
 // const bookings = []
 
@@ -1860,36 +1860,339 @@
 
 
 
-const poll = {
-    question: 'What is your favourite programming language?',
-    options: ['0: Javascipt', '1: Python', '2: Rust', '3: C++'],
-    answers: new Array(4).fill(0),
-    registerNewAnswer() {
-        const answer = 
-        Number(  prompt(
-            `${this.question}\n ${this.options.join('\n')}\n(Write option number)`
-        ))
-        console.log(this.answers)
+// const poll = {
+//     question: 'What is your favourite programming language?',
+//     options: ['0: Javascipt', '1: Python', '2: Rust', '3: C++'],
+//     answers: new Array(4).fill(0),
+//     registerNewAnswer() {
+//         const answer = 
+//         Number(  prompt(
+//             `${this.question}\n ${this.options.join('\n')}\n(Write option number)`
+//         ))
+//         console.log(this.answers)
 
-        typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++
-        this.displayResult()
-        this.displayResult('string')
+//         typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++
+//         this.displayResult()
+//         this.displayResult('string')
 
-    },
-    displayResult(type = 'array'){
-        if(type === 'array'){
-            console.log(`${this.answers}`)
-        }else if(type === 'string'){
-            console.log(`Poll results are ${this.answers}`)
-        }
-    }
+//     },
+//     displayResult(type = 'array'){
+//         if(type === 'array'){
+//             console.log(`${this.answers}`)
+//         }else if(type === 'string'){
+//             console.log(`Poll results are ${this.answers}`)
+//         }
+//     }
+// }
+
+// document.querySelector('.poll').addEventListener("click", poll.registerNewAnswer.bind(poll))
+
+// poll.displayResult.call({answers: [5, 2, 3]}, 'string')
+// poll.displayResult.call({answers: [1, 5, 3, 9, 6, 1]}, 'string')
+// poll.displayResult.call({answers: [1, 5, 3, 9, 6,1] } )
+
+
+// const lufthansa = {
+//   airline: 'Lufthansa',
+//   iataCode: 'LH',
+//   bookings: [],
+//   // book: function() {}
+//   book(flightNum, name) {
+//     console.log(
+//       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+//     );
+//     this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+//   },
+// };
+
+// lufthansa.book(239, 'Jonas Schmedtmann');
+// lufthansa.book(635, 'John Smith');
+
+// const eurowings = {
+//   airline: 'Eurowings',
+//   iataCode: 'EW',
+//   bookings: [],
+// };
+
+// const book = lufthansa.book;
+
+// // Does NOT work
+// // book(23, 'Sarah Williams');
+
+// // Call method
+// book.call(eurowings, 23, 'Sarah Williams');
+// console.log(eurowings);
+
+// book.call(lufthansa, 239, 'Mary Cooper');
+// console.log(lufthansa);
+
+// const swiss = {
+//   airline: 'Swiss Air Lines',
+//   iataCode: 'LX',
+//   bookings: [],
+// };
+
+// book.call(swiss, 583, 'Mary Cooper');
+
+// // Apply method
+// const flightData = [583, 'George Cooper'];
+// book.apply(swiss, flightData);
+// console.log(swiss);
+
+// book.call(swiss, ...flightData);
+
+
+// // call method
+// const lufthansa = {
+//     airline: 'Lufthansa',
+//     iateCode: 'LH',
+//     bookings: [],
+
+//     book(flightNum, name) {
+//         console.log(`${name} booked a seat on ${this.airline} flight ${this.iateCode} ${flightNum}`)
+//         this.bookings.push({flight: `${this.iateCode} ${flightNum}`, name})
+//     }
+    
+// }
+
+// lufthansa.book(239, 'Jonas Schemedtmann')
+// lufthansa.book(635, 'John Smith')
+// console.log(lufthansa)
+
+// const eurowings = {
+//     airline: 'Euriwings',
+//     iateCode: 'EW',
+//     bookings: [],
+// }
+
+// const book = lufthansa.book
+
+// book.call(eurowings, 23, 'Nandana')
+// console.log(eurowings)
+
+// book.call(lufthansa, 239, 'Mary cooper')
+// console.log(lufthansa)
+
+// const swiss = {
+//     airline:'Swiss Air lines',
+//     iateCode: 'LX',
+//     bookings: []
+// }
+// book.call(swiss, 583, 'Mary Cooper')
+// console.log(swiss)
+
+// const flightData = [583, 'George Cooper']
+// book.apply(swiss, flightData)
+// console.log(swiss)
+
+// // Bind method
+// const bookEW = book.bind(eurowings)
+// const bookLH = book.bind(lufthansa)
+// const bookLX = book.bind(swiss)
+
+// bookEW(23, 'Steven Williams')
+
+// const bookEW23 = book.bind(eurowings, 23)
+// bookEW23('Jonas Schmedtan')
+// bookEW23('Martha Cooper')
+
+// lufthansa.planes = 300
+// lufthansa.buyPlane = function() {
+//     this.planes++
+//     console.log(this.planes)
+// }
+// lufthansa.buyPlane()
+
+// document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa))
+
+
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
+// runOnce();
+
+// (function () {
+//     console.log(`This will never again`)
+//     const isPrivate = 23
+// })();
+
+// console.log(isPrivate)
+
+// (() => console.log(`This will ALSO never run again`))();
+
+// {
+//     const isPrivate = 23
+//     var notPrivate = 46
+// }
+// console.log(notPrivate)
+
+// const secureBooking = function() {
+//     let passengerCOunt = 0
+
+//     return function() {
+//         passengerCOunt++
+//         console.log(`${passengerCOunt}`)
+//     }
+// }
+
+// const booker = secureBooking()
+// booker()
+// booker()
+// booker()
+
+// console.dir(booker)
+
+// // closure 
+
+// let f
+
+// const g = function() {
+//     const a = 23
+//     f = function() {
+//         console.log(a * 2)
+//     }
+// }
+
+// const h = function() {
+//     const b = 777
+    
+// }
+
+// g()
+// f()
+// h()
+// f()
+// console.dir(f)
+
+// h()
+// f()
+// console.dir(f)
+
+// const boardPassengers = function(n, wait) {
+//     const perGroup = n/ 3
+
+//     setTimeout(function () {
+//         console.log(`We are now boarding all ${n} passengers`)
+//         console.log()
+//     }, 1000)
+
+//     console.log(`Will start boarding in ${wait} seconds`)
+// }
+
+// setTimeout(function() {
+//     console.log('TIMER')
+// }, 1000)
+
+// challenge2
+
+// (function () {
+//     const header = document.querySelector('h1')
+//     header.style.color = 'red'
+
+//     document.querySelector('body').addEventListener("click", function(){
+//         header.style.color = 'blue'
+//     })
+// })()
+
+// const currencies = new Map([
+//     ['USD', 'United States dollar'],
+//     ['EUR', 'Euro'],
+//     ['GBP', 'Pound sterling']
+// ])
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+
+// for(const movement of movements) {
+//     if(movement > 0){
+//         console.log(`You deposited ${movement}`)
+//     }else{
+//         console.log(`You withdrew ${Math.abs(movement)}`)
+//     }
+// }
+
+// console.log('---FOREACH----')
+// movements.forEach(function (movement) {
+//     if(movement > 0) {
+//         console.log(`You deposited ${movement}`)
+//     }else {
+//         console.log(`You withdrew  ${Math.abs(movement)}`)
+//     }
+
+// })
+
+// foreach with maps and sets
+
+// const currencies = new Map([
+//     ['USD', 'United States dollar'],
+//     ['EUR', 'Euro'],
+//     ['GBP', 'Pound sterling']
+// ])
+
+// currencies.forEach(function (value, key, map) {
+//     console.log(`${key}: ${value}`)
+// })
+
+// const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR'])
+// console.log(currenciesUnique)
+// currenciesUnique.forEach(function (value, key, map) {
+//     console.log(`${key}: ${value}`)
+// })
+
+const movements = [100, 450, -400, 3000, -650, -130, 70, 1300]
+
+// const eurTousd = 1.1
+// const movementsUSD = movements.map(function(mov) {
+//     return mov = eurTousd
+// })
+// console.log(movements)
+// console.log(movementsUSD)
+
+// const movementsUSDfor = []
+// for(const mov of movements) movementsUSDfor.push(mov* eurTousd)
+//     console.log(movementsUSDfor)
+ 
+// const deposited = movements.filter(function(mov) {
+//     return mov > 0
+// })
+// console.log(movements)
+// console.log(deposited)
+
+// const depositsFor = []
+// for(const mov of movements) if (mov > 0) depositsFor.push(mov)
+//     console.log(depositsFor)
+
+// const withdrawals = movements.filter(mov => mov < 0)
+// console.log(withdrawals)
+
+// reduce method
+// console.log(movements) 
+
+// const balance = movements.reduce(function( acc,cur, i, arr) {
+//     console.log(`Iteration ${i} : ${acc}`)
+//     return acc + cur
+// }, 0)
+// console.log(balance)
+
+// let balance2 = 0
+// for(const mov of movements) balance2 += mov
+// console.log(balance2)
+
+const dogsJulia = []
+const dogsKate = []
+
+const checkDogs = function(dogsJulia, dogsKate) {
+    const dogsJuliaCorrected = dogsJulia.slice()
+    dogsJuliaCorrected.splice(0, 1)
+    dogsJuliaCorrected.splice(-2)
+
+    const dogs = dogsJuliaCorrected.concat(dogsKate)
+    console.log(dogs)
+
+    dogs.map(function(dog, i) {
+        console.log(dog < 3 ? `Dog number ${i+1} is still a puppy` : `Dog number ${i+1} is an adult, and is ${dog} years old`)
+    })
+    // console.log(dogsJuliaCorrected)
 }
-
-document.querySelector('.poll').addEventListener("click", poll.registerNewAnswer.bind(poll))
-
-poll.displayResult.call({answers: [5, 2, 3]}, 'string')
-poll.displayResult.call({answers: [1, 5, 3, 9, 6, 1]}, 'string')
-poll.displayResult.call({answers: [1, 5, 3, 9, 6,1] } )
-
+checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4])
 
 //     

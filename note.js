@@ -74,4 +74,12 @@
 // objects :-> object literals, Arrays, FUnctions, many more...
 
 // memory lifecycle
-// 
+
+
+//MAP     :   map returns a new array containing the results of applying an operation on all original array elements
+
+
+// FILTER :   filter returns a new array containing the array elements that passed a specificed test condition
+
+
+// REDUCE :    reduce all array elements down to one single value (e.g. adding all elements together)
