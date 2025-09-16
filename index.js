@@ -1475,102 +1475,102 @@
 // }
 
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-const openingHours = {
-  [weekdays[3]]: {
-    open: 12,
-    close: 22,
-  },
-  [weekdays[4]]: {
-    open: 11,
-    close: 23,
-  },
-  [weekdays[5]]: {
-    open: 0, // Open 24 hours
-    close: 24,
-  },
-};
+// const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const openingHours = {
+//   [weekdays[3]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   [weekdays[4]]: {
+//     open: 11,
+//     close: 23,
+//   },
+//   [weekdays[5]]: {
+//     open: 0, // Open 24 hours
+//     close: 24,
+//   },
+// };
 
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  // ES6 enhanced object literals
-  openingHours,
+//   // ES6 enhanced object literals
+//   openingHours,
 
-  order(starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
+//   order(starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
 
-  orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
-    console.log(
-      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-    );
-  },
+//   orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//     );
+//   },
 
-  orderPasta(ing1, ing2, ing3) {
-    console.log(
-      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
-    );
-  },
+//   orderPasta(ing1, ing2, ing3) {
+//     console.log(
+//       `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+//     );
+//   },
 
-  orderPizza(mainIngredient, ...otherIngredients) {
-    console.log(mainIngredient);
-    console.log(otherIngredients);
-  },
-};
+//   orderPizza(mainIngredient, ...otherIngredients) {
+//     console.log(mainIngredient);
+//     console.log(otherIngredients);
+//   },
+// };
 
-console.log(`a+very+nice+string`. split('+'))
-console.log(`Jonas Schmedtman`. split(''))
+// console.log(`a+very+nice+string`. split('+'))
+// console.log(`Jonas Schmedtman`. split(''))
 
-const [firstName, lastName] = `Jonas Schedtman`.split(' ')
+// const [firstName, lastName] = `Jonas Schedtman`.split(' ')
 
-const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ')
-console.log(newName)
+// const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ')
+// console.log(newName)
 
-const capitalizeName = function(name) {
-   const names = name.split(' ')
-   const namesUpper = []
+// const capitalizeName = function(name) {
+//    const names = name.split(' ')
+//    const namesUpper = []
 
-   for(const n of names) {
-    // namesUpper.push(n[0].toUpperCase() + n.slice(1))
-    namesUpper.push(n.replace(n[0], n[0].toUpperCase()))
+//    for(const n of names) {
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1))
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()))
 
-   }
-   console.log(namesUpper.join(' '))
-}
-capitalizeName('jessica ann smith davis')
-capitalizeName('jonas schmedtman')
+//    }
+//    console.log(namesUpper.join(' '))
+// }
+// capitalizeName('jessica ann smith davis')
+// capitalizeName('jonas schmedtman')
 
 
-const message = 'Go to gate 23!'
-console.log(message.padStart(25, '+').padEnd(30, '+'))
-console.log('Jonas'.padStart(25, '+').padEnd(30, '+'))
+// const message = 'Go to gate 23!'
+// console.log(message.padStart(25, '+').padEnd(30, '+'))
+// console.log('Jonas'.padStart(25, '+').padEnd(30, '+'))
 
-const maskCreditCard = function(number) {
-    const str = number + ''
-    const last = str.slice(-4)
-    // console.log(str)
-    return last.padStart(str.length, '*')
-}
+// const maskCreditCard = function(number) {
+//     const str = number + ''
+//     const last = str.slice(-4)
+//     // console.log(str)
+//     return last.padStart(str.length, '*')
+// }
 
-console.log(maskCreditCard(123123))
-console.log(maskCreditCard(12345678910))
-console.log(maskCreditCard('1365498720'))
+// console.log(maskCreditCard(123123))
+// console.log(maskCreditCard(12345678910))
+// console.log(maskCreditCard('1365498720'))
 
-const message2 = 'Bad weather... All Departues Delayed...'
-console.log(message2.repeat(5))
+// const message2 = 'Bad weather... All Departues Delayed...'
+// console.log(message2.repeat(5))
 
-const planesInline = function(n) {
-    console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
-}
+// const planesInline = function(n) {
+//     console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
+// }
 
-planesInline(5)
-planesInline(3)
-planesInline(12)
+// planesInline(5)
+// planesInline(3)
+// planesInline(12)
 
 // const airline = `TAP Air Portugal`
 // const plane = `A320`
@@ -1638,7 +1638,225 @@ planesInline(12)
 
 // const announcement = `Allcpassengers come to barding door 23!`
 
-// 
+// document.body.append(document.createElement('textarea'))
+// document.body.append(document.createElement('button'))
+
+// const text = document.querySelector('textarea').value
+
+// document.querySelector('button').addEventListener('click', function(){
+//     const text = document.querySelector('textarea').value
+//     const rows = text.split('\n')
+//     console.log(rows)
+
+//     for(const row of rows) {
+//         const [first, second] = row.toLowerCase().trim().split('_')
+//         const output =  `${first} ${second.replace(
+//             second[0],
+//             second[0].toUpperCase()
+
+//         )}`
+//         console.log(output.padEnd(20, '✅'))
+//     }
+// })
+
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+//   const getCode = str => str.slice(0,3).toUpperCase()
+
+//   for(const flight of flights.split('+')) {
+//     const [type, from, to, time] = flight.split(';')
+//     const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll('_', ' ')} ${getCode(from)} ${getCode(to)} ${time.replace(':', 'h')})`.padStart(36)
+//     console.log(output)
+//   }
+
+
+'use strict'
+
+// const bookings = []
+
+// const createBook = function(flightNum, numPassengers = 1, price = 199) {
+//     // numPassengers = numPassengers || 1
+//     // price = price || 199
+
+//     const booking = {
+//         flightNum,
+//         numPassengers,
+//         price,
+//     }
+//     console.log(booking)
+//     bookings.push(booking)
+// }
+
+// createBook('LH123')
+// createBook('LH123', 2, 800)
+// createBook('LH123', 2)
+// createBook('LH123', 5)
+
+// createBook('LH123', 1000)
+
+// const flight = 'LH1234'
+// const jonas = {
+//     name: 'Jonas Schmedtman',
+//     passport: 13246578910
+// }
+// const checkIn = function(flightNum, passenger) {
+//     flightNum = 'LH999';
+//     passenger.name = 'Mr. ' + passenger.name
+//     if(passenger.passport === 13246578910) {
+//         alert(`Checked in`)
+//     }
+//     else{
+//         alert(`Wrong passport`)
+//     }
+// }
+
+// checkIn(flight, jonas)
+// console.log(flight)
+// console.log(jonas)
+
+// const flightNum = flight
+// const passenger = jonas
+
+// const newPassport = function(person) {
+//     person.passport = Math.trunc(Math.random() * 100000)
+// }
+
+// newPassport(jonas)
+// checkIn(flight, jonas)
+
+// const oneWord = function(str) {
+//     return str.replace(/ /g, '').toLowerCase()
+// }
+
+// const upperFirstWord = function(str) {
+//     const [first, ...others] = str.split(' ')
+//     return [first.toUpperCase(), ...others].join(' ')
+// }
+
+// const transformer = function(str, fn) {
+//     console.log(`Original string: ${str}`)
+//    console.log(`Trasform string: ${fn(str)}`)
+//    console.log(`Transformed by ${fn.name}`)
+// }
+
+// transformer('Javascipt is the best!', upperFirstWord)
+// transformer('Javascript is the best!', oneWord)
+
+// const high5 = function() {
+//     console.log('hi')
+// }
+
+// document.body.addEventListener('click', high5)
+
+// ['Jonas', 'Martha', 'Adam'].forEach(high5)
+
+// const greet = function(greeting) {
+//     return function(name) {
+//         console.log(`${greeting} ${name}`)
+//     }
+// }
+
+// const greeterHey = greet('Hey')
+// greeterHey('Jonas')
+// greeterHey('Steven')
+
+// greet('Hello') ('Jonas')
+
+// const grt = (greeting) => name => console.log(`${greeting} ${name}`)
+
+// grt('hi')('Jonas')
+
+const lufthansa = {
+    airline: 'Lufthansa',
+    iateCode: 'LH',
+    booking: [],
+
+    book(flightNum, name) {
+        console.log(`${name} bookked a seat on ${this.airline} flight ${this.iateCode} ${flightNum}`)
+        this.booking.push({flight: `${this.iateCode}${flightNum}`, name})
+    }
+    
+}
+
+lufthansa.book(239, 'Jonas Schmedtman')
+lufthansa.book(635, 'John Smith')
+
+const eurowings = {
+    name: 'Eurowings',
+    iateCode: 'EW',
+    booking: []
+}
+
+const book = lufthansa.book
+
+// book(23, 'Sarah Williams')
+
+book.call(eurowings, 23, 'Srah Williams')
+console.log(eurowings)
+
+book.call(lufthansa, 239, 'Mary Cooper')
+console.log(lufthansa)
+
+const swiss = {
+    airline: 'Swiss Air Lines',
+    iateCode: 'LX',
+    booking: []
+}
+
+book.call(swiss, 583, 'Mary Cooper')
+console.log(swiss)
+
+const flightData = [583, 'Gerorge Cooper']
+book.apply(swiss, flightData)
+console.log(swiss)
+
+book.call(swiss, ...flightData)
+
+// bind method
+book.call(eurowings, 23, 'Sarah Williams')
+
+const bookEW = book.bind(eurowings)
+const bbokLM = book.bind(lufthansa)
+const bookLX = book.bind(swiss)
+
+bookEW(23, 'Steven Williams')
+
+const bookEw23 = book.bind(eurowings, 23)
+bookEw23('Jonas Schmedtman')
+bookEw23('Martha Cooper')
+
+lufthansa.planes = 300
+lufthansa.buyPlane = function() {
+    console.log(this)
+
+    this.planes++
+    console.log(this.planes)
+}
+// lufthansa.buyPlane()
+
+document
+.querySelector('.buy')
+.addEventListener('click', lufthansa.buyPlane.bind(lufthansa))
+
+// partial applications
+const addTax = (rate, value) => value + value * rate
+console.log(addTax(0.1, 200))
+
+const addVAT = addTax.bind(null, 0.23)
+// addVAT = value => value + value *0.23
+
+console.log(addVAT(100))
+console.log(addVAT(23))
+
+const addTaxRate = function(rate) {
+    return function(value) {
+        return value + value * rate
+    }
+}
+
+const addVAT2 = addTaxRate(0.23)
+console.log(addVAT2(100))
 
 
 //     
