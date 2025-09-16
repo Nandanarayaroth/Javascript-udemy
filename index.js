@@ -1767,96 +1767,129 @@
 
 // grt('hi')('Jonas')
 
-const lufthansa = {
-    airline: 'Lufthansa',
-    iateCode: 'LH',
-    booking: [],
+// const lufthansa = {
+//     airline: 'Lufthansa',
+//     iateCode: 'LH',
+//     booking: [],
 
-    book(flightNum, name) {
-        console.log(`${name} bookked a seat on ${this.airline} flight ${this.iateCode} ${flightNum}`)
-        this.booking.push({flight: `${this.iateCode}${flightNum}`, name})
-    }
+//     book(flightNum, name) {
+//         console.log(`${name} bookked a seat on ${this.airline} flight ${this.iateCode} ${flightNum}`)
+//         this.booking.push({flight: `${this.iateCode}${flightNum}`, name})
+//     }
     
-}
+// }
 
-lufthansa.book(239, 'Jonas Schmedtman')
-lufthansa.book(635, 'John Smith')
+// lufthansa.book(239, 'Jonas Schmedtman')
+// lufthansa.book(635, 'John Smith')
 
-const eurowings = {
-    name: 'Eurowings',
-    iateCode: 'EW',
-    booking: []
-}
+// const eurowings = {
+//     name: 'Eurowings',
+//     iateCode: 'EW',
+//     booking: []
+// }
 
-const book = lufthansa.book
+// const book = lufthansa.book
 
-// book(23, 'Sarah Williams')
+// // book(23, 'Sarah Williams')
 
-book.call(eurowings, 23, 'Srah Williams')
-console.log(eurowings)
+// book.call(eurowings, 23, 'Srah Williams')
+// console.log(eurowings)
 
-book.call(lufthansa, 239, 'Mary Cooper')
-console.log(lufthansa)
+// book.call(lufthansa, 239, 'Mary Cooper')
+// console.log(lufthansa)
 
-const swiss = {
-    airline: 'Swiss Air Lines',
-    iateCode: 'LX',
-    booking: []
-}
+// const swiss = {
+//     airline: 'Swiss Air Lines',
+//     iateCode: 'LX',
+//     booking: []
+// }
 
-book.call(swiss, 583, 'Mary Cooper')
-console.log(swiss)
+// book.call(swiss, 583, 'Mary Cooper')
+// console.log(swiss)
 
-const flightData = [583, 'Gerorge Cooper']
-book.apply(swiss, flightData)
-console.log(swiss)
+// const flightData = [583, 'Gerorge Cooper']
+// book.apply(swiss, flightData)
+// console.log(swiss)
 
-book.call(swiss, ...flightData)
+// book.call(swiss, ...flightData)
 
-// bind method
-book.call(eurowings, 23, 'Sarah Williams')
+// // bind method
+// book.call(eurowings, 23, 'Sarah Williams')
 
-const bookEW = book.bind(eurowings)
-const bbokLM = book.bind(lufthansa)
-const bookLX = book.bind(swiss)
+// const bookEW = book.bind(eurowings)
+// const bbokLM = book.bind(lufthansa)
+// const bookLX = book.bind(swiss)
 
-bookEW(23, 'Steven Williams')
+// bookEW(23, 'Steven Williams')
 
-const bookEw23 = book.bind(eurowings, 23)
-bookEw23('Jonas Schmedtman')
-bookEw23('Martha Cooper')
+// const bookEw23 = book.bind(eurowings, 23)
+// bookEw23('Jonas Schmedtman')
+// bookEw23('Martha Cooper')
 
-lufthansa.planes = 300
-lufthansa.buyPlane = function() {
-    console.log(this)
+// lufthansa.planes = 300
+// lufthansa.buyPlane = function() {
+//     console.log(this)
 
-    this.planes++
-    console.log(this.planes)
-}
-// lufthansa.buyPlane()
+//     this.planes++
+//     console.log(this.planes)
+// }
+// // lufthansa.buyPlane()
 
-document
-.querySelector('.buy')
-.addEventListener('click', lufthansa.buyPlane.bind(lufthansa))
+// document
+// .querySelector('.buy')
+// .addEventListener('click', lufthansa.buyPlane.bind(lufthansa))
 
-// partial applications
-const addTax = (rate, value) => value + value * rate
-console.log(addTax(0.1, 200))
+// // partial applications
+// const addTax = (rate, value) => value + value * rate
+// console.log(addTax(0.1, 200))
 
-const addVAT = addTax.bind(null, 0.23)
-// addVAT = value => value + value *0.23
+// const addVAT = addTax.bind(null, 0.23)
+// // addVAT = value => value + value *0.23
 
-console.log(addVAT(100))
-console.log(addVAT(23))
+// console.log(addVAT(100))
+// console.log(addVAT(23))
 
-const addTaxRate = function(rate) {
-    return function(value) {
-        return value + value * rate
+// const addTaxRate = function(rate) {
+//     return function(value) {
+//         return value + value * rate
+//     }
+// }
+
+// const addVAT2 = addTaxRate(0.23)
+// console.log(addVAT2(100))
+
+
+
+const poll = {
+    question: 'What is your favourite programming language?',
+    options: ['0: Javascipt', '1: Python', '2: Rust', '3: C++'],
+    answers: new Array(4).fill(0),
+    registerNewAnswer() {
+        const answer = 
+        Number(  prompt(
+            `${this.question}\n ${this.options.join('\n')}\n(Write option number)`
+        ))
+        console.log(this.answers)
+
+        typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++
+        this.displayResult()
+        this.displayResult('string')
+
+    },
+    displayResult(type = 'array'){
+        if(type === 'array'){
+            console.log(`${this.answers}`)
+        }else if(type === 'string'){
+            console.log(`Poll results are ${this.answers}`)
+        }
     }
 }
 
-const addVAT2 = addTaxRate(0.23)
-console.log(addVAT2(100))
+document.querySelector('.poll').addEventListener("click", poll.registerNewAnswer.bind(poll))
+
+poll.displayResult.call({answers: [5, 2, 3]}, 'string')
+poll.displayResult.call({answers: [1, 5, 3, 9, 6, 1]}, 'string')
+poll.displayResult.call({answers: [1, 5, 3, 9, 6,1] } )
 
 
 //     
