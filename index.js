@@ -2555,6 +2555,49 @@ const fetchBOnous = (breeds.filter(breed => breed.activities.includes('fetch')).
 const heavy = Math.max(...fetchBOnous)
 console.log(heavy)
 
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha']
+console.log(owners.sort())
+console.log(owners)
+
+console.log(movements)
+movements.sort((a,b) => {
+  if(a > b)
+    return 1
+  if(b>a)
+    return -1
+})
+console.log(movements)
+
+movements.sort((a,b) => {
+  if(a > b) return -1
+  if(a < b) return 1 
+})
+console.log(movements)
+
+const groupedMovements = Object.groupBy(movements, movement => movement > 0 ? 'deposits' : 'withdrawal')
+console.log(groupedMovements)
+
+const groupByActivity = Object.groupBy(accounts, account => {
+  const movementCount = account.movements.length
+
+  if(movementCount >= 8) return 'very active'
+  if(movementCount >= 4) return 'active'
+  if(movementCount >= 1) return 'moderate'
+  return 'inactive'
+})
+
+console.log(groupByActivity)
+
+console.log(movements)
+const reversMov = movements.toReversed()
+console.log(reversMov)
+console.log(movements)
+
+// movements[1] = 2000
+const newMovements = movements.with(1, 2000)
+console.log(newMovements)
+console.log(movements)
+
 //        
 
 
