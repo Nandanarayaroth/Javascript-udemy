@@ -83,3 +83,32 @@
 
 
 // REDUCE :    reduce all array elements down to one single value (e.g. adding all elements together)
+
+
+// some() : some() method tests whether at least one element in the array passes the test implemented by the provided callback function
+
+// array.some(function(element, index, array) {
+    // return true or false based on condition
+// })
+
+
+// every() : every() method tests whether all elements in the array pass the test implemented by the provided callback function
+
+// array.every(function(element, index, array) {
+    // return true or false based on condition
+// })
+
+
+// flat() : flat() method creates a new array with all sub-array elements up to a specified depth
+// array.flat(depth)
+// it is useful when dealing with arrays of arrays(nested data), and you want a single-level array for easy processing
+
+// flatMap() : flatMap() method first maps each element using a mapping function, and then flattens the result by one level.
+// array.flatMap(function(element, index, array) {
+    // return an array or a value
+// })
+
+// find() : find() method returns the first element in an array that satisfies a provided testing fucntion
+// array.find(function(elemet, index, array) {
+    // return true or false
+// })
