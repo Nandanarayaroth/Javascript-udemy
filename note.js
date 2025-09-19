@@ -274,3 +274,68 @@
 // EventDelegation  :-> event delegation is a technique where instead of attaching event listeners to multiple child elements, we attach a single event listener to a common ancestor (parent) then we use the event's target property to determine which child was interacted with
 // Why Use Event Delegation : -> *improves performance, *Easier to manage dynamic elements(added after page load), *Less memory consumption(fewer event listener)
 //  
+
+// different types of the script loading
+
+// 1) Regular -> end of body
+//  *) Browser stops parsing HTMl when it finds script 
+//  *) Dowload script, runs it, then continues building the page,
+//  *)This is can block the page from showing quickly
+
+// 2) async -> async in head 
+//  *) Script loads in parallel with HTML parsing
+//  *) When the file is ready , browser pause HTML, runs the script, then continues
+//  *) Script run as soon as they are downloaded -> order is not guaranteed
+//  *) Good for independent  script 
+
+// 3) deffer -> deffer in head
+//  *) SCript loads in parallel with HTML parsing 
+//  *) But execution is delayed until the HTML is fully parsed.
+//  *) Script with defer keep their order(1st, 2nd, 3rd..)
+//  *) Best for most app scripts: page loads fast, DOM is ready, and order is safe.
+
+// Object Oriented Programming with javascript
+// oop:
+//  is a programming paradam based on object , we use object to modal to describe the real-world or abstract version
+// Object may contain data(property) and code(methods) By using object , we pack data and the corresponding behaviour into one block 
+// In oop object are self-contained pices/block of code -> we group related data(variables) and behaviour(methods) together into a single unit as an object. that objects are like mini-program because it is self contained block
+
+// Classes and Instance (traditional oop)
+// *) class is a blueprint from which we can create new object
+
+// <--Properties of the oops-->
+// 1)Absraction :-> ignoring or hinding details that don't matter, allowing usr to get an overview perspective of the thing we're implementing,instead of messing with details that don't really matter to our implementation.
+// 2)Encapsulation :-> keeping propeties and methods private inside the class, so they are not accessible from outside the class, Some methods can be exposed as a public interface (API)
+// 3)Inheritance  :-> Making all properties and methods of a certain class available to a child class forming a hierarchica; relatioship between classes. This allows us to reuse common logic and to model real-world relatioship
+// 4)Polymorphism :-> A child class can overwrite a method it inherit from a parent class 
+
+// oop in javscript
+// *)Prototypal inheritance: The prototype contains methods (behavior) that are accessible to all objects linked to that prototype
+// three way to implement prototypal inheritance in javascript ::
+
+// 1)Constructor functions :-
+//  * Technique to create objects from a function
+//  *This is how built-in objects like Arrays,Maps, or Sets are actually implemented.
+// 2)ES6 classes
+//  * Modern alternative to constructor function syntx
+//  * Syntatic sugae behind the secenes ES6 classes work exactly like constructor functions
+//  * ES6 classes do NOT behave like classes in "classical OOP" 
+// 3)Object.create()
+//  *The easiest and most straightforward way of linking an object to a prototype object.
+
+//  Prototype inheritance / delegation work
+
+
+// ES6 classes
+// 1.classes are not hoisted
+// 2.Classes are first class citizen
+// 3. Classses are executed in strict mode
+
+// inheritance between classes 
+//      the real classes are not existing in the javascript
+//      
+
+
+//  
+
+ 
