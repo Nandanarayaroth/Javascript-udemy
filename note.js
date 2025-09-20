@@ -336,6 +336,15 @@
 //      
 
 
+// project planning
+// 1.users stories :- user's prespective all users stroies put toghther dec\scribe the enteire application
+// 2.features
+// 3.flowchart:- what we will build
+// 4.Architecture:- how we will build it
+// Development
+
 //  
 
  
+
+
