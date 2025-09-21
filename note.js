@@ -343,8 +343,20 @@
 // 4.Architecture:- how we will build it
 // Development
 
-//  
 
- 
+// synchronous code :- 
+//  *) simply means excute tha code line by line in the exact order of excution
+//  *) Each line of code waits for previous line to finish eg: alert box
+//  *) Long-running operations block code execution -> demerit
 
+//  Asynchronous :-
+//  *)Asynchronous code is executed after a task that runs in the "backgorund" finishes
+//  *)Asynchronous code is non-blocking
+//  *)Execution doesn't wait for an asynchronous task to finish its work
+//  *) Callback functions alone do not make code asynchronous!, it depends on calls the callback it it's immediatley called then -> synchronous  , if it is called later (like after a timer, event, or network request) -> asynchronous
 
+// AJX :- Asynchronous Javascript And Xml : allows us to commun icate with remote web servers in asynchronous way, With AJAx calls, we can request data from web servers dynamically.
+
+// API :- Application Programming Interface : Piece of software that can be used by another piece if software, in order to allow applications to talk to each other and exchange informations between them.
+
+// Online API :- Application running on a server, that recives request for data, and sends data back as response.
